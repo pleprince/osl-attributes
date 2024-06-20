@@ -32,12 +32,12 @@ This could be fixed by adding 2 standard attributes.
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"osl:version"` | int | Major*10000 + Minor*100 + patch. | ![std]( https://img.shields.io/badge/std-grey) |
+| `"osl:version"` | int | `Major*10000 + Minor*100 + patch`. | ![std]( https://img.shields.io/badge/std-grey) |
 | `"shader:shadername"` | string | Name of the shader master. | ![std]( https://img.shields.io/badge/std-grey) |
 | `"shader:layername"` | string | Name of the layer instance. | ![std]( https://img.shields.io/badge/std-grey) |
 | `"shader:groupname"` | string | Name of the shader group. | ![std]( https://img.shields.io/badge/std-grey) |
 | `"renderer:name"` | string | lower-case name i.e. `"renderman"` | ![new]( https://img.shields.io/badge/new-blue) |
-| `"renderer:version"` | int[2] | [major, minor] i.e. `[26, 2]` | ![new]( https://img.shields.io/badge/new-blue) |
+| `"renderer:version"` | int | `Major*10000 + Minor*100 + patch`. | ![new]( https://img.shields.io/badge/new-blue) |
 
 ### Camera
 
