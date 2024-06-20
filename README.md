@@ -32,12 +32,12 @@ This could be fixed by adding 2 standard attributes.
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"osl:version"` | int | `Major*10000 + Minor*100 + patch`. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"shader:shadername"` | string | Name of the shader master. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"shader:layername"` | string | Name of the layer instance. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"shader:groupname"` | string | Name of the shader group. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"renderer:name"` | string | lower-case name i.e. `"renderman"` | ![new]( https://img.shields.io/badge/new-blue) |
-| `"renderer:version"` | int | `Major*10000 + Minor*100 + patch`. | ![new]( https://img.shields.io/badge/new-blue) |
+| `"osl:version"` | int | `Major*10000 + Minor*100 + patch`. | ![std](img/std.svg) |
+| `"shader:shadername"` | string | Name of the shader master. | ![std](img/std.svg) |
+| `"shader:layername"` | string | Name of the layer instance. | ![std](img/std.svg) |
+| `"shader:groupname"` | string | Name of the shader group. | ![std](img/std.svg) |
+| `"renderer:name"` | string | lower-case name i.e. `"renderman"` | ![new](img/new.svg) |
+| `"renderer:version"` | int | `Major*10000 + Minor*100 + patch`. | ![new](img/new.svg) |
 
 ### Camera
 
@@ -45,17 +45,17 @@ These attributes are already defined in the OSL standard, so this is just for co
 
 | Name | Type | Description | |
 | - | - | - | - |
-| `"camera:resolution"` | int[2] | Image resolution. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:pixelaspect"` | float | Pixel aspect ratio. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:projection"` | string | Projection type (e.g., "perspective", "orthographic", etc.) | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:fov"`  | float | Field of fiew. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:clip near"`  | float | Near clip distance. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:clip far"`  | float | Far clip distance. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:clip"`  | float[2] | Near and far clip distances. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:shutter open"`  | float | Shutter open time. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:shutter close"`  | float | Shutter close time. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:shutter"`  | float[2] | Shutter open and close times. | ![std]( https://img.shields.io/badge/std-grey) |
-| `"camera:screen window"` | float[4] | Screen window (xmin, ymin, xmax, ymax). | ![std]( https://img.shields.io/badge/std-grey) |
+| `"camera:resolution"` | int[2] | Image resolution. | ![std](img/std.svg) |
+| `"camera:pixelaspect"` | float | Pixel aspect ratio. | ![std](img/std.svg) |
+| `"camera:projection"` | string | Projection type (e.g., "perspective", "orthographic", etc.) | ![std](img/std.svg) |
+| `"camera:fov"`  | float | Field of fiew. | ![std](img/std.svg) |
+| `"camera:clip near"`  | float | Near clip distance. | ![std](img/std.svg) |
+| `"camera:clip far"`  | float | Far clip distance. | ![std](img/std.svg) |
+| `"camera:clip"`  | float[2] | Near and far clip distances. | ![std](img/std.svg) |
+| `"camera:shutter open"`  | float | Shutter open time. | ![std](img/std.svg) |
+| `"camera:shutter close"`  | float | Shutter close time. | ![std](img/std.svg) |
+| `"camera:shutter"`  | float[2] | Shutter open and close times. | ![std](img/std.svg) |
+| `"camera:screen window"` | float[4] | Screen window (xmin, ymin, xmax, ymax). | ![std](img/std.svg) |
 
 ### Geometry
 
@@ -66,13 +66,13 @@ These attributes are already defined in the OSL standard, so this is just for co
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"geom:tangent"` | vector | The normalised surface tangent [^1][^2]. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:undisplaced_P"` | point | The surface position before displacement. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:undisplaced_N"` | normal | The surface normal before displacement. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:reference_P"` | normal | The surface position in reference pose in object space. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:reference_N"` | normal | The surface normal in reference pose in object space. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:reference_WP"` | normal | The surface position in reference pose in world space. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:reference_WN"` | normal | The surface normal in reference pose in world space. | ![new]( https://img.shields.io/badge/new-blue) |
+| `"geom:tangent"` | vector | The normalised surface tangent [^1][^2]. | ![new](img/new.svg) |
+| `"geom:undisplaced_P"` | point | The surface position before displacement. | ![new](img/new.svg) |
+| `"geom:undisplaced_N"` | normal | The surface normal before displacement. | ![new](img/new.svg) |
+| `"geom:reference_P"` | normal | The surface position in reference pose in object space. | ![new](img/new.svg) |
+| `"geom:reference_N"` | normal | The surface normal in reference pose in object space. | ![new](img/new.svg) |
+| `"geom:reference_WP"` | normal | The surface position in reference pose in world space. | ![new](img/new.svg) |
+| `"geom:reference_WN"` | normal | The surface normal in reference pose in world space. | ![new](img/new.svg) |
 
 [^1]: Should always return a usable vector, even if there is no explicit surface parameterization, i.e. no UVs on a mesh.
 [^2]: I didn't define a bitangent attribute, as it is easily computed with N and T.
@@ -81,28 +81,28 @@ These attributes are already defined in the OSL standard, so this is just for co
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"geom:id"` | int | A unique object id, or first part of 64 bits id. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:id2"` | int | The second part of a 64 bits unique object id. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:instance_id"` | int | A unique object instance id. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:curve_id"` | int | A unique curve id. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:point_id"` | int | A unique point id. | ![new]( https://img.shields.io/badge/new-blue) |
+| `"geom:id"` | int | A unique object id, or first part of 64 bits id. | ![new](img/new.svg) |
+| `"geom:id2"` | int | The second part of a 64 bits unique object id. | ![new](img/new.svg) |
+| `"geom:instance_id"` | int | A unique object instance id. | ![new](img/new.svg) |
+| `"geom:curve_id"` | int | A unique curve id. | ![new](img/new.svg) |
+| `"geom:point_id"` | int | A unique point id. | ![new](img/new.svg) |
 
 #### classifications
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"geom:is_mesh"` | int | 1 if object is a mesh, 0 otherwise | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:is_subdiv"` | int | 1 if object is a subdivision surface, 0 otherwise | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:is_curve"` | int | 1 if object is a curve, 0 otherwise | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:is_point"` | int | 1 if object is a point, 0 otherwise | ![new]( https://img.shields.io/badge/new-blue) |
-| `"geom:is_volume"` | int | 1 if object is a point, 0 otherwise | ![new]( https://img.shields.io/badge/new-blue) |
+| `"geom:is_mesh"` | int | 1 if object is a mesh, 0 otherwise | ![new](img/new.svg) |
+| `"geom:is_subdiv"` | int | 1 if object is a subdivision surface, 0 otherwise | ![new](img/new.svg) |
+| `"geom:is_curve"` | int | 1 if object is a curve, 0 otherwise | ![new](img/new.svg) |
+| `"geom:is_point"` | int | 1 if object is a point, 0 otherwise | ![new](img/new.svg) |
+| `"geom:is_volume"` | int | 1 if object is a point, 0 otherwise | ![new](img/new.svg) |
 
 ### Rendering
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"stage:displace"` | int | 1 if running in displacement context, 0 otherwise. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"stage:shade"` | int | 1 if running in shading context, 0 otherwise. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"hit:direct"` | int | 1 if running on a direct ray hit, 0 otherwise. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"hit:indirect"` | int | 1 if running on an indirect ray hit, 0 otherwise. | ![new]( https://img.shields.io/badge/new-blue) |
-| `"hit:roughness"` | int | The incoming ray's spread, with [0:1] range. | ![new]( https://img.shields.io/badge/new-blue) |
+| `"stage:displace"` | int | 1 if running in displacement context, 0 otherwise. | ![new](img/new.svg) |
+| `"stage:shade"` | int | 1 if running in shading context, 0 otherwise. | ![new](img/new.svg) |
+| `"hit:direct"` | int | 1 if running on a direct ray hit, 0 otherwise. | ![new](img/new.svg) |
+| `"hit:indirect"` | int | 1 if running on an indirect ray hit, 0 otherwise. | ![new](img/new.svg) |
+| `"hit:roughness"` | int | The incoming ray's spread, with [0:1] range. | ![new](img/new.svg) |
