@@ -5,7 +5,7 @@ Version 0.1
 ## Motivation
 
 OSL has been tremendously successful at standardising shading but there are still non standardised areas, especially around each renderer’s internal nomenclature.
-Although the same compiled shaders can run in any renderer, it is difficult in 2024 to write a shader that performs correctly in multiple renderers because each renderer names primitive attributes differently.
+Although the same compiled shaders can run in any renderer, it is difficult in 2024 to write a shader that performs correctly in multiple renderers because each renderer names primitive attributes differently and may return some quantities in different spaces.
 
 For example, if you wish to use the surface tangent:
 
