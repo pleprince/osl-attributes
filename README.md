@@ -1,6 +1,6 @@
-# Common attributes standardisation
+# Common attributes standardisation proposal
 
-Version 0.1
+Draft 1
 
 ## Motivation
 
@@ -11,7 +11,7 @@ For example, if you wish to use the surface tangent:
 
 | Renderer | OSL call |
 | -: | :- |
-| RenderMan | `getattribute("Tn", tangent)` |
+| RenderMan | `getattribute("builtin", "Tn", tangent)` |
 | Arnold | `Vector tangent = normalize(dPdu)` |
 | Vray | `Vector tangent = normalize(dPdu)` |
 | Cycles | `getattribute("geom:tangent", tangent)` |
