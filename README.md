@@ -60,13 +60,13 @@ These attributes are already defined in the OSL standard, so this is just for co
 ### Geometry
 
 > [!NOTE]
-> Would it be possible to standardize the space in which geometric quatities are returned ?
+> We should also standardize the space in which geometric quantities are returned.
 
 #### Geometric Quantities
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"geom:tangent"` | vector | The normalised surface tangent [^1]. | ![new]( https://img.shields.io/badge/new-blue) |
+| `"geom:tangent"` | vector | The normalised surface tangent [^1][^2]. | ![new]( https://img.shields.io/badge/new-blue) |
 | `"geom:undisplaced_P"` | point | The surface position before displacement. | ![new]( https://img.shields.io/badge/new-blue) |
 | `"geom:undisplaced_N"` | normal | The surface normal before displacement. | ![new]( https://img.shields.io/badge/new-blue) |
 | `"geom:reference_P"` | normal | The surface position in reference pose in object space. | ![new]( https://img.shields.io/badge/new-blue) |
@@ -75,6 +75,7 @@ These attributes are already defined in the OSL standard, so this is just for co
 | `"geom:reference_WN"` | normal | The surface normal in reference pose in world space. | ![new]( https://img.shields.io/badge/new-blue) |
 
 [^1]: Should always return a usable vector, even if there is no explicit surface parameterization, i.e. no UVs on a mesh.
+[^2]: I didn't define a bitangent attribute, as it is easily computed with N and T.
 
 #### Identifiers
 
@@ -96,7 +97,7 @@ These attributes are already defined in the OSL standard, so this is just for co
 | `"geom:is_point"` | int | 1 if object is a point, 0 otherwise | ![new]( https://img.shields.io/badge/new-blue) |
 | `"geom:is_volume"` | int | 1 if object is a point, 0 otherwise | ![new]( https://img.shields.io/badge/new-blue) |
 
-### Rendering infos
+### Rendering
 
 | Attribute | Type | Description | |
 | - | - | - | - |
