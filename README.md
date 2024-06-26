@@ -2,6 +2,18 @@
 
 Draft 1
 
+## Table of contents
+
+1. [Motivation](#motivation)
+1. [Standard Attribute Names](#standard-attribute-names)
+   1. [Renderer Infos](#renderer-infos)
+   1. [Camera](#camera)
+   1. [Geometry](#geometry)
+      1. [Geometric quantities](#geometric-quantities)
+      1. [Identifiers](#identifiers)
+      1. [classifications](#classifications)
+    1. [Rendering](#rendering)
+
 ## Motivation
 
 OSL has been tremendously successful at standardising shading but there are still non standardised areas, especially around each renderer’s internal nomenclature.
