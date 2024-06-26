@@ -16,9 +16,9 @@ For example, if you wish to use the surface tangent:
 | Vray | `Vector tangent = normalize(dPdu)` |
 | Cycles | `getattribute("geom:tangent", tangent)` |
 | RedShift | `Vector tangent = normalize(dPdu)` |
-| 3Delight | *TBD* |
+| 3Delight | `Vector tangent = normalize(Dx(uvSet))` (u,v are parametric: need a uv set) |
 
-In this case, the shader writer hopes that u, v is not the parametric uv on meshes, otherwise dPdu may be pretty useless. But there is no guarantee.
+In this case, the shader writer hopes that u, v is not the parametric uv on meshes, otherwise dPdu may be non-smooth and pretty useless. But there is no guarantee.
 
 ## Standard attribute names
 
