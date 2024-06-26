@@ -16,9 +16,14 @@ For example, if you wish to use the surface tangent:
 | Vray | `Vector tangent = normalize(dPdu)` |
 | Cycles | `getattribute("geom:tangent", tangent)` |
 | RedShift | `Vector tangent = normalize(dPdu)` |
-| 3Delight | `Vector tangent = normalize(Dx(uvSet))` (u,v are parametric: need a uv set) |
+| 3Delight | `Vector tangent = normalize(Dx(uvSet))`[^1] |
+
+[^1]: u,v are parametric, so dPdu and dPdv won't be smooth on meshes: need a uv set and compute its derivative.
 
 In this case, the shader writer hopes that u, v is not the parametric uv on meshes, otherwise dPdu may be non-smooth and pretty useless. But there is no guarantee.
+
+> [!NOTE]
+> In the spec, `u` and `v` are *"The 2D parametric coordinates of P (on the particular geometric primitive you are shading)"*. When `dPdu` is usable, it means the renderer is computing `dPds`/`dPdt` instead of `dPdu`/`dPdv`, and straying from the spec.
 
 ## Standard attribute names
 
@@ -60,7 +65,7 @@ These attributes are already defined in the OSL standard, so this is just for co
 ### Geometry
 
 > [!NOTE]
-> We should also standardize the space in which geometric quantities are returned.
+> We should also standardize the space in which geometric quantities are returned. It should **ALWAYS** be `"common"`.
 
 #### Geometric Quantities
 
