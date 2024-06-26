@@ -49,13 +49,13 @@ These attributes are already defined in the OSL standard, so this is just for co
 | `"camera:pixelaspect"` | float | Pixel aspect ratio. | ![std](img/std.svg) |
 | `"camera:projection"` | string | Projection type (e.g., "perspective", "orthographic", etc.) | ![std](img/std.svg) |
 | `"camera:fov"`  | float | Field of fiew. | ![std](img/std.svg) |
-| `"camera:clip near"`  | float | Near clip distance. | ![std](img/std.svg) |
-| `"camera:clip far"`  | float | Far clip distance. | ![std](img/std.svg) |
+| `"camera:clip_near"`  | float | Near clip distance. | ![std](img/std.svg) |
+| `"camera:clip_far"`  | float | Far clip distance. | ![std](img/std.svg) |
 | `"camera:clip"`  | float[2] | Near and far clip distances. | ![std](img/std.svg) |
-| `"camera:shutter open"`  | float | Shutter open time. | ![std](img/std.svg) |
-| `"camera:shutter close"`  | float | Shutter close time. | ![std](img/std.svg) |
+| `"camera:shutter_open"`  | float | Shutter open time. | ![std](img/std.svg) |
+| `"camera:shutter_close"`  | float | Shutter close time. | ![std](img/std.svg) |
 | `"camera:shutter"`  | float[2] | Shutter open and close times. | ![std](img/std.svg) |
-| `"camera:screen window"` | float[4] | Screen window (xmin, ymin, xmax, ymax). | ![std](img/std.svg) |
+| `"camera:screen_window"` | float[4] | Screen window (xmin, ymin, xmax, ymax). | ![std](img/std.svg) |
 
 ### Geometry
 
