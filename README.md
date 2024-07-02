@@ -49,12 +49,12 @@ This could be fixed by adding 2 standard attributes.
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"osl:version"` | int | `Major*10000 + Minor*100 + patch`. | ![std](img/std.svg) |
-| `"shader:shadername"` | string | Name of the shader master. | ![std](img/std.svg) |
-| `"shader:layername"` | string | Name of the layer instance. | ![std](img/std.svg) |
-| `"shader:groupname"` | string | Name of the shader group. | ![std](img/std.svg) |
-| `"renderer:name"` | string | lower-case name i.e. `"renderman"` | ![new](img/new.svg) |
-| `"renderer:version"` | int | `Major*10000 + Minor*100 + patch`. | ![new](img/new.svg) |
+| `"osl:version"` | int | `Major*10000 + Minor*100 + patch`. | ![std][0] |
+| `"shader:shadername"` | string | Name of the shader master. | ![std][0] |
+| `"shader:layername"` | string | Name of the layer instance. | ![std][0] |
+| `"shader:groupname"` | string | Name of the shader group. | ![std][0] |
+| `"renderer:name"` | string | lower-case name i.e. `"renderman"` | ![new][1] |
+| `"renderer:version"` | int | `Major*10000 + Minor*100 + patch`. | ![new][1] |
 
 ### Camera
 
@@ -62,17 +62,17 @@ These attributes are already defined in the OSL standard, so this is just for co
 
 | Name | Type | Description | |
 | - | - | - | - |
-| `"camera:resolution"` | int[2] | Image resolution. | ![std](img/std.svg) |
-| `"camera:pixelaspect"` | float | Pixel aspect ratio. | ![std](img/std.svg) |
-| `"camera:projection"` | string | Projection type (e.g., "perspective", "orthographic", etc.) | ![std](img/std.svg) |
-| `"camera:fov"`  | float | Field of fiew. | ![std](img/std.svg) |
-| `"camera:clip_near"`  | float | Near clip distance. | ![std](img/std.svg) |
-| `"camera:clip_far"`  | float | Far clip distance. | ![std](img/std.svg) |
-| `"camera:clip"`  | float[2] | Near and far clip distances. | ![std](img/std.svg) |
-| `"camera:shutter_open"`  | float | Shutter open time. | ![std](img/std.svg) |
-| `"camera:shutter_close"`  | float | Shutter close time. | ![std](img/std.svg) |
-| `"camera:shutter"`  | float[2] | Shutter open and close times. | ![std](img/std.svg) |
-| `"camera:screen_window"` | float[4] | Screen window (xmin, ymin, xmax, ymax). | ![std](img/std.svg) |
+| `"camera:resolution"` | int[2] | Image resolution. | ![std][0] |
+| `"camera:pixelaspect"` | float | Pixel aspect ratio. | ![std][0] |
+| `"camera:projection"` | string | Projection type (e.g., "perspective", "orthographic", etc.) | ![std][0] |
+| `"camera:fov"`  | float | Field of fiew. | ![std][0] |
+| `"camera:clip_near"`  | float | Near clip distance. | ![std][0] |
+| `"camera:clip_far"`  | float | Far clip distance. | ![std][0] |
+| `"camera:clip"`  | float[2] | Near and far clip distances. | ![std][0] |
+| `"camera:shutter_open"`  | float | Shutter open time. | ![std][0] |
+| `"camera:shutter_close"`  | float | Shutter close time. | ![std][0] |
+| `"camera:shutter"`  | float[2] | Shutter open and close times. | ![std][0] |
+| `"camera:screen_window"` | float[4] | Screen window (xmin, ymin, xmax, ymax). | ![std][0] |
 
 ### Geometry
 
@@ -83,13 +83,13 @@ These attributes are already defined in the OSL standard, so this is just for co
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"geom:tangent"` | vector | The normalised surface tangent [^1][^2]. | ![new](img/new.svg) |
-| `"geom:undisplaced_P"` | point | The surface position before displacement. | ![new](img/new.svg) |
-| `"geom:undisplaced_N"` | normal | The surface normal before displacement. | ![new](img/new.svg) |
-| `"geom:reference_P"` | normal | The surface position in reference pose in object space. | ![new](img/new.svg) |
-| `"geom:reference_N"` | normal | The surface normal in reference pose in object space. | ![new](img/new.svg) |
-| `"geom:reference_WP"` | normal | The surface position in reference pose in world space. | ![new](img/new.svg) |
-| `"geom:reference_WN"` | normal | The surface normal in reference pose in world space. | ![new](img/new.svg) |
+| `"geom:tangent"` | vector | The normalised surface tangent [^1][^2]. | ![new][1] |
+| `"geom:undisplaced_P"` | point | The surface position before displacement. | ![new][1] |
+| `"geom:undisplaced_N"` | normal | The surface normal before displacement. | ![new][1] |
+| `"geom:reference_P"` | normal | The surface position in reference pose in object space. | ![new][1] |
+| `"geom:reference_N"` | normal | The surface normal in reference pose in object space. | ![new][1] |
+| `"geom:reference_WP"` | normal | The surface position in reference pose in world space. | ![new][1] |
+| `"geom:reference_WN"` | normal | The surface normal in reference pose in world space. | ![new][1] |
 
 [^1]: Should always return a usable vector, even if there is no explicit surface parameterization, i.e. no UVs on a mesh.
 [^2]: I didn't define a bitangent attribute, as it is easily computed with N and T.
@@ -98,28 +98,31 @@ These attributes are already defined in the OSL standard, so this is just for co
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"geom:id"` | int | A unique object id, or first part of 64 bits id. | ![new](img/new.svg) |
-| `"geom:id2"` | int | The second part of a 64 bits unique object id. | ![new](img/new.svg) |
-| `"geom:instance_id"` | int | A unique object instance id. | ![new](img/new.svg) |
-| `"geom:curve_id"` | int | A unique curve id. | ![new](img/new.svg) |
-| `"geom:point_id"` | int | A unique point id. | ![new](img/new.svg) |
+| `"geom:id"` | int | A unique object id, or first part of 64 bits id. | ![new][1] |
+| `"geom:id2"` | int | The second part of a 64 bits unique object id. | ![new][1] |
+| `"geom:instance_id"` | int | A unique object instance id. | ![new][1] |
+| `"geom:curve_id"` | int | A unique curve id. | ![new][1] |
+| `"geom:point_id"` | int | A unique point id. | ![new][1] |
 
 #### classifications
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"geom:is_mesh"` | int | 1 if object is a mesh, 0 otherwise | ![new](img/new.svg) |
-| `"geom:is_subdiv"` | int | 1 if object is a subdivision surface, 0 otherwise | ![new](img/new.svg) |
-| `"geom:is_curve"` | int | 1 if object is a curve, 0 otherwise | ![new](img/new.svg) |
-| `"geom:is_point"` | int | 1 if object is a point, 0 otherwise | ![new](img/new.svg) |
-| `"geom:is_volume"` | int | 1 if object is a point, 0 otherwise | ![new](img/new.svg) |
+| `"geom:is_mesh"` | int | 1 if object is a mesh, 0 otherwise | ![new][1] |
+| `"geom:is_subdiv"` | int | 1 if object is a subdivision surface, 0 otherwise | ![new][1] |
+| `"geom:is_curve"` | int | 1 if object is a curve, 0 otherwise | ![new][1] |
+| `"geom:is_point"` | int | 1 if object is a point, 0 otherwise | ![new][1] |
+| `"geom:is_volume"` | int | 1 if object is a point, 0 otherwise | ![new][1] |
 
 ### Rendering
 
 | Attribute | Type | Description | |
 | - | - | - | - |
-| `"stage:displace"` | int | 1 if running in displacement context, 0 otherwise. | ![new](img/new.svg) |
-| `"stage:shade"` | int | 1 if running in shading context, 0 otherwise. | ![new](img/new.svg) |
-| `"hit:direct"` | int | 1 if running on a direct ray hit, 0 otherwise. | ![new](img/new.svg) |
-| `"hit:indirect"` | int | 1 if running on an indirect ray hit, 0 otherwise. | ![new](img/new.svg) |
-| `"hit:roughness"` | int | The incoming ray's spread, with [0:1] range. | ![new](img/new.svg) |
+| `"stage:displace"` | int | 1 if running in displacement context, 0 otherwise. | ![new][1] |
+| `"stage:shade"` | int | 1 if running in shading context, 0 otherwise. | ![new][1] |
+| `"hit:direct"` | int | 1 if running on a direct ray hit, 0 otherwise. | ![new][1] |
+| `"hit:indirect"` | int | 1 if running on an indirect ray hit, 0 otherwise. | ![new][1] |
+| `"hit:roughness"` | int | The incoming ray's spread, with [0:1] range. | ![new][1] |
+
+[0]: https://img.shields.io/badge/std-grey
+[1]: https://img.shields.io/badge/new-blue
