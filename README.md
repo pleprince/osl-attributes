@@ -28,7 +28,7 @@ For example, if you wish to use the surface tangent:
 | Vray | `Vector tangent = normalize(dPdu)` |
 | Cycles | `getattribute("geom:tangent", tangent)` |
 | RedShift | `Vector tangent = normalize(dPdu)` |
-| 3Delight | `Vector tangent = normalize(Dx(uvSet))`[^1] |
+| 3Delight | `getattribute("myUVs", uvSet);`</br>`Vector tangent = normalize(Dx(uvSet));`[^1] |
 
 [^1]: u,v are parametric, so dPdu and dPdv won't be smooth on meshes: need a uv set and compute its derivative.
 
